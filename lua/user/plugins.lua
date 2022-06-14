@@ -13,6 +13,8 @@ return require('packer').startup(function()
     use 'neovim/nvim-lspconfig'             
     use 'williamboman/nvim-lsp-installer'
 
+    -- Snippet
+    use "L3MON4D3/LuaSnip" --snippet engine
 
     -- Telescope
     use {
@@ -21,7 +23,15 @@ return require('packer').startup(function()
     }
 
     -- colorscheme
-    use 'luisiacc/gruvbox-baby'                               
+    -- use 'luisiacc/gruvbox-baby'                               
+    -- use 'eddyekofo94/gruvbox-flat.nvim'
+    -- use 'sainnhe/gruvbox-material'
+    -- use 'marko-cerovac/material.nvim'
+    use 'folke/tokyonight.nvim'
+    use 'sainnhe/everforest'
+
+    -- color
+    use 'norcalli/nvim-colorizer.lua'
 
     -- completion 
     use 'neovim/nvim-lspconfig'
@@ -65,6 +75,33 @@ return require('packer').startup(function()
         config = function()
             require('Comment').setup()
         end
+    }
+
+    -- which-key
+    use {
+        "folke/which-key.nvim",
+        config = function()
+        require("which-key").setup {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        }
+    end
+    }
+
+    -- Toggleterm
+    use {"akinsho/toggleterm.nvim", tag = 'v1.*', config = function()
+        require("toggleterm").setup()
+    end}
+
+    -- Indent Guide
+    use 'lukas-reineke/indent-blankline.nvim'
+
+    -- Competitive Programming
+    use {
+        'xeluxee/competitest.nvim',
+        requires = 'MunifTanjim/nui.nvim',
+        config = function() require'competitest'.setup() end
     }
 end)
 
