@@ -17,7 +17,7 @@ local mappings = {
     f = {
         name = "file",
         f = { "<cmd>Telescope find_files<CR>", "Find File"},
-        t = { "<cmd>Telescope live-grep theme=ivy<CR>", "Find text"},
+        t = { "<cmd>Telescope live_grep<CR>", "Find text"},
     },
     t = {
         name = "Terminal",

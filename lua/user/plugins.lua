@@ -103,5 +103,16 @@ return require('packer').startup(function()
         requires = 'MunifTanjim/nui.nvim',
         config = function() require'competitest'.setup() end
     }
+
+    -- Scrollbar
+    use {
+      'lewis6991/satellite.nvim',
+      config = function()
+        require('satellite').setup()
+      end
+    }
+
+    -- Debugger
+    use 'mfussenegger/nvim-dap'
 end)
 
