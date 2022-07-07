@@ -25,10 +25,8 @@ return require('packer').startup(function()
     -- colorscheme
     -- use 'luisiacc/gruvbox-baby'                               
     -- use 'eddyekofo94/gruvbox-flat.nvim'
-    -- use 'sainnhe/gruvbox-material'
+    use 'sainnhe/gruvbox-material'
     -- use 'marko-cerovac/material.nvim'
-    use 'folke/tokyonight.nvim'
-    use 'sainnhe/everforest'
 
     -- color
     use 'norcalli/nvim-colorizer.lua'
@@ -104,15 +102,14 @@ return require('packer').startup(function()
         config = function() require'competitest'.setup() end
     }
 
-    -- Scrollbar
-    use {
-      'lewis6991/satellite.nvim',
-      config = function()
-        require('satellite').setup()
-      end
-    }
 
     -- Debugger
     use 'mfussenegger/nvim-dap'
+
+    -- Autopair
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    } 
 end)
 

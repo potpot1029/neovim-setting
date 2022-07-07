@@ -1,10 +1,9 @@
--- vim.g.everforest_background= 'medium'
-
-vim.cmd [[
-try
-    colorscheme tokyonight 
-catch /^Vim\%((\a\+)\)\=:E185/
-    colorscheme default
+vim.cmd([[
     set background=dark
-endtry
-]]
+
+    let g:gruvbox_material_background = 'hard'
+    let g:gruvbox_material_foreground = 'mix'
+    let g:gruvbox_material_enable_bold = '1'
+
+    colorscheme gruvbox-material
+]])

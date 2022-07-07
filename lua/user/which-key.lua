@@ -26,8 +26,8 @@ local mappings = {
     n = {
         name = "Navigating",
         c = { "<cmd>BufferClose<CR>", "Close Tab" },
-        k = { "<cmd>BufferLineCycleNext<CR>", "Next Tab" },
-        j = { "<cmd>BufferLineCyclePrev<CR>", "Previous Tab" },
+        l = { "<cmd>BufferLineCycleNext<CR>", "Next Tab" },
+        h = { "<cmd>BufferLineCyclePrev<CR>", "Previous Tab" },
     },
     z = {
         name = "Competitest",
